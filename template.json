@@ -1,0 +1,8 @@
+{
+    "Template": {
+      "TemplateName": "PrimeiroTemplate",
+      "SubjectPart": "Parabéns!!, {{nome}}!",
+      "HtmlPart": "<h1>Olá {{nome}},</h1><p>Segue o link para acesso ao portal {{link}}.</p>",
+      "TextPart": "Olá {{nome}},\r\nSegue o link para acesso ao portal {{link}}."
+    }
+  }
