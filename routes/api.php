@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CourseController;
+use App\Http\Controllers\Api\ModuleController;
 use App\Http\Controllers\MailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,3 +24,9 @@ Route::post('/mail', [MailController::class, 'send']);
 Route::get('/',function (Request $request){ return response()->json(['Sucesso'],200); });
 
 Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/courses/{identify}', [CourseController::class, 'show']);
+Route::post('/courses', [CourseController::class, 'store']);
+Route::put('/courses/{course}', [CourseController::class, 'update']);
+Route::delete('/courses/{identify}', [CourseController::class, 'destroy']);
+
+Route::apiResource('/modules/{course}',ModuleController::class );
